@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout practice 1-1 1127</title>
+    
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        header {
+            color: #fff;
+            background-color: #009688;
+            padding: 10px;
+        }
+        header h1 {
+            margin : 10px 0px
+        }
+        .box { width: 100%;}
+
+        .img-container {
+            float: left;
+            width: 33.3%;
+            padding: 15px;
+        }
+
+        .img-container img{
+            width: 100%;
+        }
+        .card {box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);}
+
+        .card-text{
+            padding: 5px;
+        }
+        .box::after {
+            content:"";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Summer Holiday</h1>
+    </header>
+    <main>
+        <div class="box">
+            <div class="img-container">
+                <div class="card">
+                    <img src="./images/img_5terre2.jpg" alt="">
+                    <div class="card-text">
+                        <h4>5terre</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="img-container">
+                <div class="card">
+                    <img src="./images/img_forest.jpg" alt="">
+                    <div class="card-text">
+                        <h4>forest</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="img-container">
+                <div class="card">
+                    <img src="./images/img_mountains.jpg" alt="">
+                    <div class="card-text">
+                        <h4>mountains</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="img-container">
+                <div class="card">
+                    <img src="./images/img_manarola.jpg" alt="">
+                    <div class="card-text">
+                        <h4>manarola</h4>
+                    </div>
+                </div> 
+            </div>
+            <div class="img-container">
+                <div class="card">
+                    <img src="./images/img_corniglia.jpg" alt="">
+                    <div class="card-text">
+                        <h4>corniglia</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="img-container">
+                <div class="card">
+                    <img src="./images/img_riomaggiore.jpg" alt="">
+                    <div class="card-text">
+                        <h4>riomaggiore</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    
+    <title>sidenav 1127</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .contents {
+            margin-left: 200px; /*네비게이션과 겹치지 않기 위해*/
+            padding-left: 20px;
+        }
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            /* 최상위 태그의 시작지점(0,0)을 기준으로 화면 전체에 고정하는 방식*/
+            position: fixed;
+            /*하나의 위치에서 여러 태그가 겹쳐서 그려질 경우
+            화면에 표시되는 우선 순위를 표시하는 속성*/
+            z-index: 100px;
+            top: 0px;
+            left: 0px;
+            /*컨텐츠가 가로로 화면을 벗어나면 표시되지 않음*/
+            overflow-x:hidden;
+            background-color: #111111;
+        }
+        .sidenav ul {
+            margin: 8px 0px;
+            padding:0;
+        }
+        .sidenav a{
+            color : white;
+            padding: 16px;
+            text-decoration: none;
+            /*한 줄에 하나만, 마진패딩값 온전히 사용 가능*/
+            display: block;
+        }
+        .sidenav a:hover{
+            background-color: #dddddd;
+            color: black;
+        }
+
+        .sidenav a:active{ /*눌렀을때 변함*/
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">링크1</a></li>
+            <li><a href="#">링크2</a></li>
+            <li><a href="#">링크3</a></li>
+        </ul>
+    </div>
+    <div class="contents">
+        <h2>메인 컨텐츠</h2>
+        <p>메인 컨텐츠가 들어갈 자리</p>
+    </div>
+</body>
+</html>

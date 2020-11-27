@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <title>layout practice1-2 1127</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Castoro', serif;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #009688;
+            padding: 20px; 
+            /*h1말고 header 자체에서 패딩값 넣어주면 컨텐츠와 공간이 생기지 않는다*/
+        }
+
+        header h1 {
+            color: white;
+            margin : 0px
+        }
+
+        /* display:block인 태그에 width의 크기를 정하고
+            margin값 중 left, right를 auto로 주면 중앙정렬됨*/
+        section {
+            width: 960px; /*보통 쓰는 사이즈*/
+            margin: 0 auto; /*상하값0 좌우값 auto 중앙정렬 공식*/
+        }
+
+        article {
+            margin: 10px;
+        }
+        
+        .card-image{
+            float: left;
+            width: 33%;
+        }
+
+        /*부모 태그의 크기만큼 이미지의 크기를 설정하기 위함*/
+        .card-image img{width: 100%;}
+
+        .card-text{
+            float: left;
+            width: 67%;
+            padding: 15px;
+        }
+
+        article::after {
+            content:"";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Summer Holiday</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <div class="card-image"><img src="./images/img_5terre.jpg" alt=""></div>
+                <div class="card-text">
+                    <h3>5 Terre</h3>
+                    <p>Suspendisse tempus feugiat rutrum. Nulla blandit, dolor et dignissim ultricies, metus enim sollicitudin odio, vitae commodo enim mauris ac nunc. Sed non velit sed sapien pellentesque mattis ac ac enim. Aliquam ac tempus libero. Ut pharetra ultrices eros, in convallis turpis cursus sit amet. Proin aliquam malesuada risus, ut interdum lacus tincidunt at. </p>
+                </div>
+            </article>
+            <article>
+                <div class="card-image"><img src="./images/img_monterosso.jpg" alt=""></div>
+                <div class="card-text">
+                    <h3>Monterosso</h3>
+                    <p>Suspendisse tempus feugiat rutrum. Nulla blandit, dolor et dignissim ultricies, metus enim sollicitudin odio, vitae commodo enim mauris ac nunc. Sed non velit sed sapien pellentesque mattis ac ac enim. Aliquam ac tempus libero. Ut pharetra ultrices eros, in convallis turpis cursus sit amet. Proin aliquam malesuada risus, ut interdum lacus tincidunt at. </p>
+                </div>
+            </article>
+            <article>
+                <div class="card-image"><img src="./images/img_vernazza.jpg" alt=""></div>
+                <div class="card-text">
+                    <h3>Vernazza</h3>
+                    <p>Suspendisse tempus feugiat rutrum. Nulla blandit, dolor et dignissim ultricies, metus enim sollicitudin odio, vitae commodo enim mauris ac nunc. Sed non velit sed sapien pellentesque mattis ac ac enim. Aliquam ac tempus libero. Ut pharetra ultrices eros, in convallis turpis cursus sit amet. Proin aliquam malesuada risus, ut interdum lacus tincidunt at. </p>
+                </div>
+            </article>
+            <article>
+                <div class="card-image"><img src="./images/img_corniglia.jpg" alt=""></div>
+                <div class="card-text">
+                    <h3>Corniglia</h3>
+                    <p>Suspendisse tempus feugiat rutrum. Nulla blandit, dolor et dignissim ultricies, metus enim sollicitudin odio, vitae commodo enim mauris ac nunc. Sed non velit sed sapien pellentesque mattis ac ac enim. Aliquam ac tempus libero. Ut pharetra ultrices eros, in convallis turpis cursus sit amet. Proin aliquam malesuada risus, ut interdum lacus tincidunt at. </p>
+                </div>
+            </article>
+            <article>
+                <div class="card-image"><img src="./images/img_riomaggiore.jpg" alt=""></div>
+                <div class="card-text">
+                    <h3>Riomaggiore</h3>
+                    <p>Suspendisse tempus feugiat rutrum. Nulla blandit, dolor et dignissim ultricies, metus enim sollicitudin odio, vitae commodo enim mauris ac nunc. Sed non velit sed sapien pellentesque mattis ac ac enim. Aliquam ac tempus libero. Ut pharetra ultrices eros, in convallis turpis cursus sit amet. Proin aliquam malesuada risus, ut interdum lacus tincidunt at. </p>
+                </div>
+            </article>
+            <article>
+                <div class="card-image"><img src="./images/img_manarola.jpg" alt=""></div>
+                <div class="card-text">
+                    <h3>Manarola</h3>
+                    <p>Suspendisse tempus feugiat rutrum. Nulla blandit, dolor et dignissim ultricies, metus enim sollicitudin odio, vitae commodo enim mauris ac nunc. Sed non velit sed sapien pellentesque mattis ac ac enim. Aliquam ac tempus libero. Ut pharetra ultrices eros, in convallis turpis cursus sit amet. Proin aliquam malesuada risus, ut interdum lacus tincidunt at. </p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

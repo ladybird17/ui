@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout practice1-3 1127</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Castoro', serif;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: whitesmoke;
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        header h1{
+            font-size: 4em;
+            margin: 0;
+        }
+
+        main{
+            max-width: 960px; /* 최대 너비 설정 */
+            margin: 0 auto;
+        }
+        
+        section {
+            float: left;
+            width: 75%;
+            padding: 0px 10px;
+        }
+        aside {
+            float: left;
+            width: 25%;
+        }
+
+        .main-img{
+            padding: 15px;
+
+        }
+        .main-img img {
+            width: 100%;
+        }
+
+        .main-text{
+            padding-left: 15px;
+        }
+
+        .side-top{
+            background-color: whitesmoke;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .side-middle{
+            background-color: whitesmoke;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .side-bottom{
+            background-color: whitesmoke;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        section::after {
+            content:"";
+            display: table;
+            clear: both;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1><b>Weekly Birds</b></h1>
+    </header>
+    <main>
+        <section> <!--메인 컨텐츠-->
+            <article class="art1"> <!--같은 주제의 다른 내용을 표시하는 article-->
+                <div class="main-img"> <img src="./images/bluebird.jpg" alt="파란새"> </div>
+                <div class="main-text">
+                    <h2>Blue Bird</h2>
+                    <p>Bluebirds are territorial and prefer open grassland with scattered trees. This is similar to the behavior of many species of woodpeckers. <br> Bluebirds can typically produce between two and four broods during the spring and summer (March through August in the Northeastern United States). <br> Males identify potential nest sites and try to attract prospective female mates to those nesting sites with special behaviors that include singing and flapping wings, and then placing some material in a nesting box or cavity. If the female accepts the male and the nesting site, she alone builds the nest and incubates the eggs. Predators of young bluebirds in the nests can include snakes, cats, and raccoons.</p>
+                </div>
+            </article>
+        </section>
+        <aside> <!-- 사이드 컨텐츠 -->
+            <article class="art2">
+                <div class="side-top">
+                    <h2>Humming Bird</h2>
+                    <p>A map of the hummingbird family tree – reconstructed from analysis of 284 of the world's 338 known species – shows rapid diversification from 22 million years ago.</p>
+                </div>
+                <div class="side-middle">
+                    <h2>Owl</h2>
+                    <p>Owls hunt mostly small mammals, insects, and other birds, although a few species specialize in hunting fish. </p>
+                </div>
+                <div class="side-bottom">
+                    <h2>The Great Tucan</h2>
+                    <p>Toucans range in size from the lettered aracari (Pteroglossus inscriptus), at 130 g (4.6 oz) and 29 cm (11 in), to the toco toucan (Ramphastos toco), at 680 g (1.50 lb) and 63 cm (25 in). Their bodies are short (of comparable size to a crow's) and compact. The tail is rounded and varies in length, from half the length to the whole length of the body. The neck is short and thick.</p>
+                </div>
+            </article>
+        </aside>
+    </main>
+</body>
+</html>
