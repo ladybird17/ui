@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <title>UI layout 2-1 1130</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        main{
+            margin: 0 auto;
+        }
+
+        header h2{
+            font-weight: normal; /*텍스트의 굵기 조절*/
+            margin-bottom: 5px;
+        }
+        
+        .TT{
+            float: left;
+            width: 32%;
+            margin: 0 5px;
+        }
+
+        table{
+            width: 100%;
+        }
+
+        table:hover{
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        }
+
+        table, th, td{
+            border-collapse: collapse;
+            border: 0.5px solid #dadada;
+            text-align: center;
+        }
+        .Basic thead, .Premium thead {
+            background-color: black;
+            color: white;
+        }
+        .Pro thead {
+            background-color: #109210;
+            color: white;
+        }
+
+        thead th{
+            padding: 30px;
+            font-size: 25px;
+        }
+
+        td{
+            padding: 10px;
+        }
+
+        tfoot{
+            background-color: #e2e2e2;
+        }
+
+        tfoot th{
+            padding: 15px;
+        }
+
+        tbody h1{
+            margin: 0;
+        }
+
+        .buttons{
+            background-color: #109210;
+            border:none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+        }
+
+        .buttons:hover{
+            background-color: #bdbbbb;
+            color: black;
+        }
+
+        section::after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Responsive Pricing Tables</h2>
+    </header>
+    <main>
+        <section>
+            <div>
+                <table class="TT Basic">
+                    <thead>
+                        <tr><th>Basic</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td> <strong>10GB</strong> Storage </td></tr>
+                        <tr><td> <strong>10</strong> Emails </td></tr>
+                        <tr><td> <strong>10</strong> Domains </td></tr>
+                        <tr><td> <strong>Endless</strong> Support </td></tr>
+                        <tr><td> <h1>$ 10</h1> <br> Storage </td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th><button type="button" class="buttons">sign up</button></th></tr>
+                    </tfoot>
+                </table>
+                <table class="TT Pro">
+                    <thead>
+                        <tr><th>Pro</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td> <strong>25GB</strong> Storage </td></tr>
+                        <tr><td> <strong>25</strong> Emails </td></tr>
+                        <tr><td> <strong>25</strong> Domains </td></tr>
+                        <tr><td> <strong>Endless</strong> Support </td></tr>
+                        <tr><td> <h1>$ 25</h1> <br> Storage </td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th><button type="button" class="buttons"> sign up</button></th></tr>
+                    </tfoot>
+                </table>
+                <table class="TT Premium">
+                    <thead>
+                        <tr><th>Premium</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td> <strong>50GB</strong> Storage </td></tr>
+                        <tr><td> <strong>50</strong> Emails </td></tr>
+                        <tr><td> <strong>50</strong> Domains </td></tr>
+                        <tr><td> <b>Endless</b> Support </td></tr>
+                        <tr><td> <h1>$ 50</h1> <br> Storage </td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th><button type="button" class="buttons"><strong>sign up</strong></button></th></tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

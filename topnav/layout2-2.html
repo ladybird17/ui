@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>UI layout 2-2 1130</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        section{
+            margin: 20px 20px;
+            padding: 20px 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            background-color: rgb(235, 232, 232);
+        }
+
+        /* font-weight 속성은 100~900까지, 기본값 normal 400, bold 700 */
+        .title1 h1{ 
+            font-size: 40px;
+            margin: 10px;
+            color: rgb(51, 175, 247);
+            text-align: center; /*text-align속성은 상속된다*/
+        }
+
+        .fa{
+            font-size: 45px;
+            color: rgb(51, 175, 247);
+            text-align: center;
+            width: 5%;
+            float: left;
+        }
+
+        /* input태그는 기본값이 display:inline-block 임.
+        컨텐츠의 크기가 곧 자신의 크기가 된다.
+        그래서 display:block을 해주면 자기 크기대로 사용*/
+        input{ 
+            width:95%;
+            height: 35px;
+            display:block;
+            float: left;
+        }
+
+        .forms{
+            padding : 10px;
+        }
+        .Send{
+            text-align: center;
+        }
+        .Send button{
+            background-color: rgb(51, 175, 247);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            width: 100px;
+            height: 50px;
+        }
+
+        .Send button:hover{
+            background-color: rgb(235, 232, 232);
+            color: black;
+        }
+
+        .forms::after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="title1">
+                <h1>Contact Us</h1>
+            </div>
+            <div>
+                <div class="forms">
+                    <i class="fa fa-user"></i>
+                    <input type="text" value="First Name">
+                </div>
+                <div class="forms">
+                    <i class="fa fa-user"></i>
+                    <input type="text" value="Last Name">
+                </div>
+                <div class="forms">
+                    <i class="fa fa-envelope-o"></i>
+                    <input type="email" value="Email">
+                </div>
+                <div class="forms">
+                    <i class="fa fa-phone"></i>
+                    <input type="text" value="Phone">
+                </div>
+                <div class="forms">
+                    <i class="fa fa-pencil"></i>
+                    <input type="text" value="Message">
+                </div>
+                <div class="Send">
+                    <button>send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

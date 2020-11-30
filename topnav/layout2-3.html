@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <title>layout2-3 1130</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Castoro', serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: rgb(50, 243, 50)
+
+        }
+
+        header h1{
+            font-size: 40px;
+            color: white;
+            margin: 0px 10px;
+        }
+
+        header a{
+            color: white;
+            font-size: 40px;
+            text-decoration: none;
+        }
+
+        .A1{
+            padding-left: 20px;
+        }
+        .A2{
+            float: right;
+            padding-right: 20px;
+        }
+
+        section{
+            float: left;
+            width: 70%;
+            padding: 0px 15px;
+        }
+        
+        aside{
+            float: left;
+            width: 30%;
+            padding-right: 15px;
+        }
+
+        img{
+            width: 60%;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .Atable table,th,td{
+            border-collapse: collapse;
+            border: 0.5px solid rgb(207, 207, 207);
+        }
+
+        .Atable thead {
+            background-color: rgb(50, 243, 50);
+        }
+
+        tr:nth-child(even) {background-color: #f2f2f2;}
+
+        main::after{
+            content: 0;
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>White Wines - Chardonnay</h1>
+        <div>
+            <a href="./layout2-4.html" class="A1">&laquo</a>
+            <a href="./layout2-4.html" class="A2">&raquo</a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <article class="Aimg">
+                <img src="./images/img_chardonnay.jpg" alt="">
+            </article>
+            <article class="Atable">
+                <h2>Food</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Food</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Seafood</td>
+                            <td>Shrimps, Crab, Lobster</td>
+                        </tr>
+                        <tr>
+                            <td>Meat</td>
+                            <td>Chicken, Pork</td>
+                        </tr>
+                        <tr>
+                            <td>Cheese</td>
+                            <td>Brie, Gruyere</td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td>Cream sauces</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article class="Atable">
+                <h2>Flavours</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Age</th>
+                            <th>Flavor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Less Ripe</td>
+                            <td>Green Plum, Green Apple, Pear</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>Lemon, Peach, Melon</td>
+                        </tr>
+                        <tr>
+                            <td>More Ripe</td>
+                            <td>Pineapple, Fig, Banana, Mango</td>
+                        </tr>
+                        <tr>
+                            <td>Oaked</td>
+                            <td>added Cream or Butter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article class="Atable">
+                <h2>Neighbors</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Neighbour</th>
+                            <th>Flavour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pinot Gris</td>
+                            <td>Like under-riped Chardonnay</td>
+                        </tr>
+                        <tr>
+                            <td>Semillion</td>
+                            <td>Lighter with more lemon</td>
+                        </tr>
+                        <tr>
+                            <td>Viognier</td>
+                            <td>More Vanilla, Flowers or Perfume</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <aside>
+            <h2>Chardonnay</h2>
+            <p>Chardonnay is the world's most popular wine grape. <br><br>
+
+                The taste of the Chardonnay grape is very neutral and easy to like. <br><br>
+                
+                Many of the Chardonnay flavors are derived from terroir and oak-aging. <br><br>
+                
+                The flavors varies from noticeable acidity (Cold Climates), to crisply and mineral (Chablis, France) with flavors of green plum, apple and pear, to heavy oak and tropical fruit flavors (the New World). <br><br>
+                
+                In cooler climates Chardonnay tends to be under-riped. <br><br>
+                
+                In warmer climates the flavors tend to vary from lemon to peach and melon. <br><br>
+                
+                In very warm climates Chardonnay tends to be over-riped. <br><br>
+                
+                Oaked Chardonnay tends to have softer acidity and more fruit flavors with added butter, cream and hazelnut notes.</p>
+        </aside>
+    </main>
+</body>
+</html>

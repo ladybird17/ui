@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <title>layout2-4 1130</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Castoro', serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            background-color: rgb(50, 243, 50)
+
+        }
+
+        header h1{
+            font-size: 40px;
+            color: white;
+            margin: 0px 10px;
+        }
+
+        header a{
+            color: white;
+            font-size: 40px;
+            text-decoration: none;
+        }
+
+        .A1{
+            padding-left: 20px;
+        }
+        .A2{
+            float: right;
+            padding-right: 20px;
+        }
+
+        section{
+            float: left;
+            width: 70%;
+            padding: 0px 15px;
+        }
+        
+        aside{
+            float: left;
+            width: 30%;
+            padding-right: 15px;
+        }
+
+        img{
+            width: 60%;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .Atable table,th,td{
+            border-collapse: collapse;
+            border: 0.5px solid rgb(207, 207, 207);
+        }
+
+        .Atable thead {
+            background-color: rgb(50, 243, 50);
+        }
+
+        tr:nth-child(even) {background-color: #f2f2f2;}
+
+        main::after{
+            content: 0;
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>White Wines - Sauvignon Blanc</h1>
+        <div>
+            <a href="./layout2-3.html" class="A1">&laquo</a>
+            <a href="./layout2-3.html" class="A2">&raquo</a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <article class="Aimg">
+                <img src="./images/img_sauvignon_blanc.jpg" alt="">
+            </article>
+            <article class="Atable">
+                <h2>Food</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Food</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Seafood</td>
+                            <td>Fish</td>
+                        </tr>
+                        <tr>
+                            <td>Meat</td>
+                            <td>Chicken, Pork, Veal</td>
+                        </tr>
+                        <tr>
+                            <td>Cheese</td>
+                            <td>Herbed goat cheese, Nutty cheese, Gruyere</td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td>Mexican, Vietnamese</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article class="Atable">
+                <h2>Flavours</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Age</th>
+                            <th>Flavor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Less Ripe</td>
+                            <td>Lime, Gooseberry</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>Green apple, Citrus, Passion fruit</td>
+                        </tr>
+                        <tr>
+                            <td>More Ripe</td>
+                            <td>Grapefruit, Peach, Melon</td>
+                        </tr>
+                        <tr>
+                            <td>Oaked</td>
+                            <td>Vanilla, Smoke</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article class="Atable">
+                <h2>Neighbors</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Neighbour</th>
+                            <th>Flavour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vermentino</td>
+                            <td>More floral and citrusy</td>
+                        </tr>
+                        <tr>
+                            <td>Gruner Veltiner</td>
+                            <td>More lime, lemon, and grapfruit</td>
+                        </tr>
+                        <tr>
+                            <td>Verdejo</td>
+                            <td>More texture and peach</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <aside>
+            <h2>Sauvignon Blanc</h2>
+            <p>Depending on the climate, the flavor can range from grass to tropical fruit.
+                <br><br>
+                In cooler climates, the wines have noticeable acidity and flavors of grass and passion fruit.
+                <br><br>
+                In warmer climates, the wines can develop over-ripeness aromas like grapefruit, peach, and melon.</p>
+        </aside>
+    </main>
+</body>
+</html>
