@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>layout3-2 W3S 홈페이지2(1과 유사) 1201</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        header{
+            padding: 100px;
+            margin-bottom: 15px;
+            text-align: center;
+            background-color: #8e78a5;
+            color: white;
+        }
+
+        header h1{
+            font-size: 50px;
+            margin: 0;
+        }
+
+        section{
+            float: left;
+            width: 80%;
+            margin-left: 300px;
+            padding-left: 3px;
+            position: relative;
+            right: 0;
+        }
+        article{
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            padding-bottom: 20px;
+            box-shadow: 0 0 10px rgb(0,0,0,0.5);
+            background-color: rgb(245, 243, 243);
+        }
+        
+        aside{
+            float: left;
+            overflow-x: hidden;
+            position:absolute; /*부모태그의 시작 위치를 기반으로 하여 원하는 위치에 배치 가능*/
+            height: 100%;
+            width:300px;
+            z-index: 100;
+            left: 0;
+        }
+
+        aside img{
+            width: 80%;
+            padding-bottom: 10px;
+        }
+        .imgcl{
+            border-bottom: 0.1px solid #d1cece
+        }
+
+        aside ul{
+            list-style-type: none;
+            padding-left: 10px;
+            width: 100%;
+        }
+
+        aside li{
+            padding: 5px 0px 5px 5px; /*ul, li 왼쪽 합쳐서 15px*/
+        }
+
+        aside a{
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+
+        aside li:hover{
+            background-color: rgb(189, 188, 188);
+        }
+
+        article h1{
+            font-size: 45px;
+            margin: 0;
+            padding-top: 10px;
+        }
+
+        .button{
+            margin-top : 10px
+        }
+        .button a{
+            text-decoration: none;
+            font-weight: normal;
+            background-color:  #8e78a5;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        .code{
+            margin: 20px 0px 20px 0px;
+            padding: 10px;
+            background-color: white;
+            border-left: 5px solid  #8e78a5;
+        }
+
+        .name1{color: brown;}
+        .name2{color: red;}
+        .name3{color: blue;}
+
+        .code span{
+            padding: 5px 0px 5px 0px;
+        }
+
+        .info{
+            text-align: center;
+            padding:30px;
+        }
+        
+        .info a{
+            color: gray;
+            padding:10px;
+            margin:10px
+        }
+
+        .blackbar{
+            overflow-x: hidden;
+            background-color: #797777;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        .blackbar a{
+            filter:invert(100%);
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        
+
+        main::after{
+            content:"";
+            display: table;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <aside>
+            <div class="blackbar">
+                <a href=""><i class="fa fa-align-justify" style="width: 33.33%;"></i></a>
+                <a href=""><i class="fa fa-file-o" style="width: 33.33%;"></i></a>
+                <a href=""><i class="fa fa-camera" style="width: 33.33%;"></i></a>
+            </div>
+            <div class="imgcl">
+                <img src="./images/w3schools.png" alt="">
+            </div>
+            
+            <ul>
+                <li><a href="">Learn HTML</a></li>
+                <li><a href="">Learn CSS</a></li>
+                <li><a href="">Learn W3.CSS</a></li>
+                <li><a href="">Learn Colors</a></li>
+                <li><a href="">Learn JavaScript</a></li>
+                <li><a href="">Learn XMl</a></li>
+                <li><a href="">Learn SQL</a></li>
+                <li><a href="">Learn PHP</a></li>
+            </ul>
+        </aside>
+        <section>
+            <header>
+                <h1>W3Schools.com</h1>
+            </header>
+            <article>
+                <h1>CSS</h1>
+                <h3>The Language for Styling Web Pages</h3>
+                <div class="button top">
+                    <a href="">LEARN CSS</a>
+                    <a href="">CSS REFERENCE</a>
+                </div>
+                <div class="code">
+                    <span class="name1">body</span> <span>{ <br></span>
+                    <span class="name2">&nbsp;&nbsp;&nbsp;background-color</span>
+                    <span>:</span>
+                    <span class="name3">#d0e4fe; <br></span> 
+                    <span>} <br></span>
+                    <span class="name1">h1 </span> <span>{ <br></span>
+                    <span class="name2">&nbsp;&nbsp;&nbsp;color </span>
+                    <span>:</span>
+                    <span class="name3">orange; <br></span>
+                    <span class="name2">&nbsp;&nbsp;&nbsp;text-align </span>
+                    <span>:</span>
+                    <span class="name3">center; <br></span>
+                    <span>} <br></span>
+                    <span class="name1">p </span>
+                    <span>{ <br></span>
+                    <span class="name2">&nbsp;&nbsp;&nbsp;font-family</span>
+                    <span>:</span>
+                    <span class="name3">"Times New Roman"; <br></span>
+                    <span class="name2">&nbsp;&nbsp;&nbsp;font-size
+                    <span>:</span>
+                    <span class="name3">20px; <br></span>
+                    <span>}</span>
+                    </P>
+                </div>
+                <div class="button bottom">
+                    <a href="">Try it Yourself</a>
+                </div>
+            </article>
+
+            <article>
+                <h1>JS</h1>
+                <h3>The Language for Programming Web Pages</h3>
+                <div class="button top">
+                    <a href="">LEARN JS</a>
+                    <a href="">JS REFERENCE</a>
+                </div>
+                <div class="code">
+                    <span class="name4">// Click the button to change the color of this paragraph <br><br></span>
+                    <span class="name3">function</span>
+                    <span>myFunction() { <br></span>
+                    <span class="name3">&nbsp;&nbsp;&nbsp;var</span>
+                    <span>x; <br></span>
+                    <span>&nbsp;&nbsp;&nbsp;x = document.getElementbyID(</span>
+                    <span class="name1">"demo"</span>
+                    <span>); <br></span>
+                    <span>&nbsp;&nbsp;&nbsp;x.style.fontSize = </span>
+                    <span class="name1">"25px"</span>
+                    <span>; <br></span>
+                    <span>&nbsp;&nbsp;&nbsp;x.style.color = </span>
+                    <span class="name1">"red"</span>
+                    <span>; <br></span>
+                    <span>}</span>
+                </div>
+                <div class="button bottom">
+                    <a href="">Try it Yourself</a>
+                </div>
+            </article>
+            <article class="info">
+                <a href="">FORUM</a>
+                <a href="">ABOUT</a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
