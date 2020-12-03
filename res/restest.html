@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>반응형 웹사이트 문제 1-3  1203</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .login { /* display : block인 태그의 width크기를 지정하고 margin left, right를 auto로 주면 중앙정렬됨*/
+            width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+
+        .login h1{
+            font-size: 3em;
+        }
+
+        form *{
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        form input, form button{
+            width: 100%;
+        }
+
+        form input{
+            padding-left: 10px;
+            border: 0.5px solid #c7c7c7;
+        }
+
+        form button{
+            border: none;
+            background-color: #350c3f;
+            color: white;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .login{
+                width: 400px;
+            }
+    
+            form input, form button {font-size: 16px;}
+
+            form button {background-color: green;}
+            form button:hover {background-color: yellowgreen;}
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    문제1. 특정 사이트에 로그인하기 위한 id, pw 입력 창을 만들고, 로그인 버튼도 생성하기
+    화면의 크기에 따라 글자 id, pw 창의 글자 크기가 변경됨
+    화면의 크기는 768px을 기준으로 함. 폰트의 크기는 큰화면 32px, 작은화면 16px 사용
+    다른 CSS 속성은 마음대로 추가
+    -->
+    <div class="login">
+        <h1>LOGIN</h1>
+        <form action="#">
+            <input type="text" placeholder="아이디"> <br>
+            <input type="password" placeholder="비밀번호"> <br>
+            <button type="submit">로그인</button>
+        </form>
+    </div>
+</body>
+</html>
