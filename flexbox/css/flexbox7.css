@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/forestbridge.jpg");
+    background-size: cover;
+
+}
+
+
+main div{
+    position: absolute;
+    color: white;
+}
+
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo h3{
+    font-weight: 100;
+}
+
+.power{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.power h4{
+    font-weight: 100;
+}
+
+.power h4 a{
+    color: white;
+}
+
+.title{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1{
+    font-size: 100px;
+    position: relative;
+    animation-name: ani1;
+    animation-duration: 3s;
+}
+
+.title hr{
+    width : 40%;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.title p{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+@keyframes ani1{
+    0% { top: -500px; opacity: 0;}
+    100% { top : 0px; opacity: 1;}
+}

@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    padding: 60;
+    text-align: center;
+    background-color:#f1f1f1;
+    color: white;
+    font-family: 'Gugi', cursive;
+}
+
+header h1, header p{
+    font-weight: normal;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #a6f3c0;
+}
+
+nav li > a{
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav li > a:hover{
+    background-color: #9eeeb6;
+    color: black;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #dddddd;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    background-color: #f1f1f1;
+    padding: 20px;
+    flex: 30%;
+}
+
+section {
+    flex: 70%;
+    padding: 50px;
+}
+
+.fake-img {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.photo-me { height: 200px; }
+
+.photo-link { height: 60px; }
+
+.photo-post{ height: 200px; }
+
+article {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media all and (max-width:576px){
+    main, nav ul {
+        flex-direction: column;
+        /*float 사용시 main의 자손태그인 aside, section의 width를 100%로 변경*/
+    }
+}

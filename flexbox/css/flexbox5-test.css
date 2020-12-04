@@ -1,0 +1,104 @@
+/* 
+문제 1 : flex box를 사용하여 만들어진 현재 사이트를 
+float을 사용하는 방식으로 작성하세요
+*/
+
+
+* {box-sizing: border-box;}
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header{
+    padding: 60;
+    text-align: center;
+    background-color:#f1f1f1;
+    color: white;
+}
+
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #a6f3c0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li > a{
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav li > a:hover{
+    background-color: #9eeeb6;
+    color: black;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #dddddd;
+}
+
+
+aside {
+    float: left;
+    width: 30%;
+    padding: 10px 20px;
+}
+
+aside .profile{
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+section {
+    float: left;
+    width: 70%;
+    padding: 10px 20px;
+}
+
+.fake-img {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.photo-me { height: 200px; }
+
+.photo-link { height: 60px; }
+
+.photo-post{ height: 200px; }
+
+article {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media all and (max-width:576px){
+    aside, section {
+        width: 100%;
+    }
+}
