@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./jquery-3.5.1.js"></script>
+    <title>측면에서 출력되는 메뉴 1207</title>
+    <style>
+        .sidebar{
+            height: 100%;
+            width: 0; /*너비 0이라서 안보임*/
+            position: fixed; /*웹브라우저의 body영역에 고정시킴*/
+            z-index: 100; /*fixed를 사용하여 다른 태그와 겹쳐져 그려지기 때문에 z-index사용해서 제일 위로 올려줌*/
+            top: 0;
+            left: 0;
+            background-color: #111111;
+            overflow-x: hidden;
+            transition: 0.5s; /* 이동시킬 때 사용하는 속성. 0.5초동안 이동 */
+            padding-top: 60px;
+        }
+
+        .sidebar a{
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: gray;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover{
+            color: white;
+        }
+
+        .sidebar .btn-close{
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .btn-open{
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111111;
+            color: white;
+            padding: 16px;
+            border: none;
+        }
+        .btn-opne:hover{
+            background-color: #444444;
+        }
+
+        #main{
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btnOpen").on("click",function(){
+                //main에도 marginLeft를 250줘서 사이드바와 겹치지 않도록 함
+                $("#mySidebar").css("width","250px");
+                $("#main").css("marginLeft","250px");
+            });
+            $("#btnClose").on("click",function(){
+                $("#mySidebar").css("width","0px");
+                $("#main").css("marginLeft","0px");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="sidebar" id="mySidebar">
+        <a class="btn-close" id="btnClose"><i class="fa fa-close"></i></a>
+        <a href="#">링크 1</a>
+        <a href="#">링크 2</a>
+        <a href="#">링크 3</a>
+        <a href="#">링크 4</a>
+    </div>
+    <div id="main">
+        <button class="btn-open" id="btnOpen">Open Sidebar</button>
+
+    </div>
+</body>
+</html>

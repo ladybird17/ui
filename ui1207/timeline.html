@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body{
+            background-color: darkgray;
+        }
+
+        .timeline{
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /*
+        ::after, ::before 가상 클래스
+        */
+        .timeline::after{ /*타임라인 중앙선 그리기*/
+            content: "";
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0px; /*위에서 아래까지 쭉 이어져있음*/
+            bottom: 0px;
+            left: 50%; /*중앙배치*/
+            margin-left: 3px;
+        }
+
+        .container{
+            padding: 10px 40px; /*공간 상하10 좌우40씩 띄워줌*/
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .container::after{ /* 자동으로 container 클래스를 사용하여 자동으로 원형을 그려줌 */
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px; /* container 기준으로 오른쪽에서 -17px */
+            top: 15px;
+            background-color: white;
+            border: 4px solid #FF9f55;
+            border-radius : 50%; /* 원형이 되는 속성,속성값*/
+            z-index: 100;
+        }
+
+        .left{left: 0;}
+        .right{left: 50%;}
+
+        /* left가 그려지기 전에 추가로 그리기*/
+        .left::before{
+            content: "";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            right: 30px;
+            z-index: 100;
+            border: medium solid white;
+            border-width: 10px 0px 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before{
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 22px;
+            left: 30px;
+            z-index: 100;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0px;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after{
+            left: -16px;
+        }
+
+        .content{
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>2020</h2>
+                <p>평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여 민주평화통일자문회의를 둘 수 있다.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2019</h2>
+                <p>국가안전보장에 관련되는 대외정책·군사정책과 국내정책의 수립에 관하여 국무회의의 심의에 앞서 대통령의 자문에 응하기 위하여 국가안전보장회의를 둔다.</p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2018</h2>
+                <p>헌법재판소 재판관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2017</h2>
+                <p>국회는 법률에 저촉되지 아니하는 범위안에서 의사와 내부규율에 관한 규칙을 제정할 수 있다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

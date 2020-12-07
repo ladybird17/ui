@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라디언트 배경색상 변경</title>
+    <style>
+        body{
+            height: 3000px;
+            background: linear-gradient(150deg,#0fb8ad 0%, #1fc8bd 50%, #2cb5e8 80%);
+            /*
+            필기참고
+            */
+        }
+
+        .box{
+            width: 100%;
+            height: 200px;
+        }
+
+        .gra1 { background : linear-gradient(red, yellow);}
+        .gra2 { background : linear-gradient(to top, red, yellow);}
+        .gra3 { background : linear-gradient(to left, red, yellow);}
+        .gra4 { background : linear-gradient(to right, red, yellow);}
+        .gra5 { background : linear-gradient(to top left, red, yellow);} /*대각선*/
+        .gra6 { background : linear-gradient(130deg, red, yellow);}
+
+    </style>
+</head>
+<body>
+    <h1>그라디언트 배경색상 변경</h1>
+    <p>마우스 휠을 돌리면 색상이 점점 변경됨</p>
+
+    <div class="testbody">
+    </div>
+
+    <div class="box gra1"></div>
+    <div class="box gra2"></div>
+    <div class="box gra3"></div>
+    <div class="box gra4"></div>
+    <div class="box gra5"></div>
+    <div class="box gra6"></div>
+</body>
+</html>

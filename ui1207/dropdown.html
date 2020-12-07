@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown 1207</title>
+    <style>
+        .drop-menu {
+            background-color: greenyellow;
+            color: black;
+            padding: 16px;
+            font-size: 1rem;
+        }
+
+        .dropdown{
+            position: relative; /* 자식태그에 position:absolute를 사용하기 위해 부모태그엔 relative 해줘야함 */
+            display: inline-block; /* 보통 네비게이션바를 만들때 이용하기 때문에 한줄에서 마진을 포함하는 inline-block으로 해줌*/
+        }
+
+        .dropdown-item{
+            display: none; /*평소에는 안보이게*/
+            position: absolute; /* absolute는 부모태그의 시작점을 같이 사용한다. */
+            background-color: lightgray;
+            /* 출력되는 메뉴의 최소 크기 설정 */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0, 0.3);
+            z-index: 100; /*다른 컨텐츠들 위로 확실히 띄워주기*/
+        }
+
+        .dropdown-item a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            /* a태그는 display: inline이므로 block으로 변경하여 세로형 메뉴로 보이도록 함 */
+            display: block;
+        }
+
+        .dropdown-item a:hover{
+            background-color: darkgray;
+        }
+        /* 마우스 포인터가 dropdown-menu 전체 어디에 존재해도 dropdown 메뉴가 표시되도록 함 */
+        .dropdown:hover .dropdown-item {display: block;}
+        .dropdown:hover .drop-menu{ background-color: green;}
+    </style>
+</head>
+<body>
+    <h3>dropdown 버튼 만들기</h3>
+    <div class="dropdown">
+        <button class="drop-menu">dropdown button</button>
+        <!-- 평소에는 display:none을 통해 숨겨져 있다가 마우스 포인터가 해당 버튼 위에 올라가면 보여지는 영역-->
+        <div class="dropdown-item">
+            <a href="#">링크1</a>
+            <a href="#">링크2</a>
+            <a href="#">링크3</a>
+        </div>
+    </div>
+</body>
+</html>
